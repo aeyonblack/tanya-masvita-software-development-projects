@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <ImageView
+        android:id="@+id/userList_profile_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_background"
+        android:contentDescription="@string/profile_photo"/>
+
+    <TextView
+        android:id="@+id/userList_username"
+        style="@style/headerStyle"
+        android:layout_toEndOf="@id/userList_profile_photo"
+        android:text="@string/username_placeHolder"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/userList_user_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userList_username"
+        android:layout_toEndOf="@id/userList_profile_photo"
+        android:text="18 Years old"
+        android:textSize="13dp"/>
+
+
+    <Button
+        android:id="@+id/addFriendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@id/userList_profile_photo"
+        android:layout_below="@id/userList_user_age"
+        android:background="@drawable/button_background_white"
+        android:drawableStart="@drawable/ic_handshake"
+        android:padding="8dp"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="4dp"
+        android:text="Add"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorBlack"
+        android:includeFontPadding="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/addFriendButton"
+        android:background="@color/colorDevPurple"
+        android:layout_marginBottom="8dp"/>
+</RelativeLayout>

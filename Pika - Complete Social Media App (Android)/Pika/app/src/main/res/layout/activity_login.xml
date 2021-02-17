@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_activity_login"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="#d580ff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        tools:ignore="UselessParent"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_logo"
+            android:src="@drawable/pikka"
+            style="@style/playbookLogo"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/playbook_logo"/>
+
+        <RelativeLayout
+            android:id="@+id/relay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_logo"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:text="@string/login"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                style="@style/headerStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/tv_login">
+
+                <TextView
+                    android:text="@string/et_email_hint"
+                    style="@style/hintStyle"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et1_email"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="Autofill,LabelFor"
+
+                    style="@style/inputStyle" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:text="@string/password"
+                    style="@style/hintStyle" />
+
+                <EditText
+                    android:id="@+id/et1_password"
+                    android:inputType="textPassword"
+                    tools:ignore="Autofill,LabelFor"
+                    style="@style/inputStyle" />
+
+                <Button
+                    android:id="@+id/bt_login"
+                    android:text="@string/login_now_bt"
+                    android:textColor="#d580ff"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_background_white"
+                    style="@style/loginButtonStyle"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/bt_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/bt_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:text="@string/forgot_password"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/colorWhite"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EditProfileInfo"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/edit_info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:title="Edit Info"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/age_background_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_all_inclusive_black_24dp"
+                    android:tint="@color/colorWhite"
+                    android:contentDescription="@string/background_image"
+                    android:background="@drawable/rectangular_background"/>
+
+                <TextView
+                    android:id="@+id/age_edit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/age_background_img"
+                    android:layout_margin="8dp"
+                    android:text="@string/soon_i_ll_be_updating_this_for_you"
+                    android:textSize="13sp"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/colorBlack"
+                    android:drawableTint="@color/colorAge"
+                    android:drawableStart="@drawable/ic_all_inclusive_black_24dp"/>
+
+                <View
+                    android:id="@+id/div_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:textAlignment="center"
+                    android:layout_below="@id/age_edit_tv"
+                    android:background="@color/colorDevPurple"/>
+
+                <EditText
+                    android:id="@+id/age_edit_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/div_1"
+                    android:layout_margin="8dp"
+                    android:hint="@string/e_g_21"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="Autofill"
+                    android:gravity="center"
+                    android:inputType="number"/>
+
+                <View
+                    android:id="@+id/div_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/age_edit_et"
+                    android:background="@color/colorDevPurple"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/relationshipStat_background_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_favorite_black_24dp"
+                    android:tint="@color/colorWhite"
+                    android:contentDescription="@string/background_image"
+                    android:background="@drawable/rectangular_background"/>
+
+                <TextView
+                    android:id="@+id/relationship_edit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relationshipStat_background_img"
+                    android:layout_margin="8dp"
+                    android:text="@string/whats_your_relationship_status"
+                    android:textSize="13sp"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/colorBlack"
+                    android:drawableTint="@color/colorRelationship"
+                    android:drawableStart="@drawable/ic_favorite_black_24dp"/>
+
+                <View
+                    android:id="@+id/div_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/relationship_edit_tv"
+                    android:background="@color/colorDevPurple"/>
+
+                <TextView
+                    android:id="@+id/relation_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading_ph_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/div_3"
+                    android:layout_margin="8dp"/>
+
+                <Button
+                    android:id="@+id/change_relation_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background_white"
+                    android:text="@string/change"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorRelationship"
+                    android:textStyle="bold"
+                    android:layout_below="@id/relation_tv"
+                    android:layout_marginBottom="8dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/div_3"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/rad_just_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/single_relation_stat"/>
+
+                    <RadioButton
+                        android:id="@+id/rad_single_mingle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/single_ready_mingle"/>
+
+                    <RadioButton
+                        android:id="@+id/rad_in_relationship"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_a_relationship"/>
+                    <RadioButton
+                        android:id="@+id/rad_married"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/married"/>
+
+                    <RadioButton
+                        android:id="@+id/rad_broke_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/broke_up"/>
+
+                    <RadioButton
+                        android:id="@+id/rad_not_sure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_sure"/>
+
+                    <RadioButton
+                        android:id="@+id/rad_rather_not_say"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rather_not_say"/>
+
+                </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/div_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/colorDevPurple"/>
+
+                <ImageView
+                    android:id="@+id/mood_background_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:padding="12dp"
+                    android:layout_below="@id/div_4"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_mood_black_24dp"
+                    android:tint="@color/colorWhite"
+                    android:contentDescription="@string/background_image"
+                    android:background="@drawable/rectangular_background"/>
+
+                <TextView
+                    android:id="@+id/mood_edit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mood_background_img"
+                    android:layout_margin="8dp"
+                    android:text="@string/share_your_mood"
+                    android:textSize="13sp"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/colorMood"
+                    android:textColor="@color/colorBlack"
+                    android:drawableStart="@drawable/ic_mood_black_24dp"/>
+
+                <View
+                    android:id="@+id/div_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/mood_edit_tv"
+                    android:background="@color/colorDevPurple"/>
+
+                <EditText
+                    android:id="@+id/mood_edit_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/div_5"
+                    android:layout_margin="8dp"
+                    android:hint="@string/feeling_awesome"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    tools:ignore="Autofill"
+                    android:inputType="textCapSentences" />
+
+                <View
+                    android:id="@+id/div_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/mood_edit_et"
+                    android:background="@color/colorDevPurple"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/save_info_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background_white"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

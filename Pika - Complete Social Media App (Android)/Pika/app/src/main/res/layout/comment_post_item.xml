@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/post_commenter_photo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/round_background"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/profile_photo" />
+
+    <TextView
+        android:id="@+id/post_commenter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_placeHolder"
+        android:layout_toEndOf="@id/post_commenter_photo"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/firstComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@id/post_commenter_photo"
+        android:layout_below="@id/post_commenter_name"
+        android:text="@string/place_holder_comment" />
+
+</RelativeLayout>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent">
+
+        <ImageView
+            android:id="@+id/profile_profilePhoto"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_background"
+            tools:ignore="ContentDescription"
+            android:transitionName="@string/profile_photo"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/profile_username"
+            style="@style/headerStyle"
+            android:text="@string/username_placeHolder"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="22sp" />
+
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:text="My Bio"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22dp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/profile_user_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_holder_bio"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </LinearLayout>
+
+        </android.support.design.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_ph_text"
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/edit_profile_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_ripple"
+                android:tint="@color/colorBlack"
+                android:backgroundTint="@color/colorGray"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:padding="12dp"
+                android:contentDescription="@string/image_button" />
+
+            <ImageView
+                android:id="@+id/open_settings_bt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="@color/colorBlack"
+                android:backgroundTint="@color/colorGray"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_settings_black_24dp"
+                android:background="@drawable/circle_ripple"
+                android:contentDescription="@string/image_button" />
+
+            <ImageView
+                android:id="@+id/open_more_bt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="@color/colorBlack"
+                android:backgroundTint="@color/colorGray"
+                android:padding="12dp"
+                android:src="@drawable/ic_more_horiz_black_24dp"
+                android:background="@drawable/circle_ripple"
+                android:contentDescription="@string/image_button" />
+
+        </LinearLayout>
+        <TextView
+            style="@style/headerStyle"
+            android:text="Following"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            android:textColor="@color/colorBlack"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_following_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/following_item"
+            android:scrollbars="vertical"
+            android:clipToPadding="false"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGray"
+            android:layout_margin="8dp"/>
+
+        <!--Header-->
+        <TextView
+            style="@style/headerStyle"
+            android:text="Social"
+            android:layout_margin="6dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <!--Fingerprint-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/fingerprint_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:padding="8dp"
+                android:src="@drawable/ic_fingerprint_black_24dp"
+                android:backgroundTint="@color/colorFingerprint"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/fingerprint_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Fingerprint"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/fingerprint_img"/>
+
+            <TextView
+                android:id="@+id/fingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/fingerprint_img"
+                android:layout_below="@id/fingerprint_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Status-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/status_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorStatus"
+                android:padding="8dp"
+                android:src="@drawable/ic_visibility_black_24dp"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/status_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Status"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/status_img"/>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/status_img"
+                android:layout_below="@id/status_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Age-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/age_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorAge"
+                android:src="@drawable/ic_all_inclusive_black_24dp"
+                android:padding="8dp"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/age_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Age"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/age_img"/>
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/age_img"
+                android:layout_below="@id/age_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Location-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/location_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorLocation"
+                android:src="@drawable/ic_person_pin_circle_black_24dp"
+                android:padding="8dp"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/location_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Location"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/location_img"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/location_img"
+                android:layout_below="@id/location_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Relationship status-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/relation_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorRelationship"
+                android:src="@drawable/ic_favorite_black_24dp"
+                android:padding="8dp"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/relation_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Relationship Status"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/relation_img"/>
+
+            <TextView
+                android:id="@+id/relation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/relation_img"
+                android:layout_below="@id/relation_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Mood-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/mood_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorMood"
+                android:padding="8dp"
+                android:tint="@color/colorWhite"
+                android:src="@drawable/ic_mood_black_24dp"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/mood_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Mood"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/mood_img"/>
+
+            <TextView
+                android:id="@+id/mood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/mood_img"
+                android:layout_below="@id/mood_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Following-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/following_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorFollowing"
+                android:padding="8dp"
+                android:src="@drawable/ic_group_black_24dp"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/following_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Following"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/following_img"/>
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/following_img"
+                android:layout_below="@id/following_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+        <!--Followers-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/followers_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorFollowers"
+                android:padding="8dp"
+                android:src="@drawable/ic_bubble_chart"
+                android:tint="@color/colorWhite"
+                android:contentDescription="@string/profile_info_icon"/>
+
+            <TextView
+                android:id="@+id/followers_title"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="Followers"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/followers_img"/>
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/followers_img"
+                android:layout_below="@id/followers_title"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="@string/info"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

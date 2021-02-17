@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:id="@+id/main_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/quiz_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_place_holder"
+            android:textColor="@color/colorBlack"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/quiz_tv"
+            android:layout_margin="8dp"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/quiz_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz tag"
+                android:background="@drawable/white_button_background"
+                android:paddingTop="8dp"
+                android:textSize="13sp"
+                android:backgroundTint="#4dc3ff"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/solution_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solution : 123"
+                android:layout_toEndOf="@id/quiz_tag"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorLightGreen"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/got_it_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_bg"
+                android:src="@drawable/ic_check_black_24dp"
+                android:padding="8dp"
+                android:backgroundTint="@color/colorGrayLight"
+                android:tint="@color/colorBlack"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/main_rel"
+        android:background="@color/colorGrayLight"/>
+
+
+</RelativeLayout>

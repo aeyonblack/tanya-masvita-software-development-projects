@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_sell_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Sell Item"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/snap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/snap"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_camera_alt_black_24dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background_filled"/>
+
+            <ImageView
+                android:id="@+id/sell_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorGray"
+                android:contentDescription="Item to sell"/>
+
+
+            <EditText
+                android:id="@+id/item_title_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/styled_edit_text"
+                android:hint="What is this?"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:backgroundTint="#e6ccff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:inputType="text|textCapSentences"/>
+            <EditText
+                android:id="@+id/item_description_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/styled_edit_text"
+                android:hint="Describe it..."
+                android:backgroundTint="#e6ccff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_margin="8dp"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/item_price_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/styled_edit_text"
+                android:hint="Price e.g $15"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:backgroundTint="#e6ccff"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/sell_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_background_filled"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                android:text="Sell this item"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

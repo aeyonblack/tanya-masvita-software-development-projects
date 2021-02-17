@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:backgroundTint="#00cc7a"
+                        android:src="@drawable/ic_check_black_24dp"
+                        android:background="@drawable/round_bg"
+                        android:contentDescription="@string/img"/>
+                    <TextView
+                        android:id="@+id/text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_1"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/total_score"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/total_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_1"
+                        android:layout_below="@id/text_1"
+                        android:text="220/325(68%)"
+                        android:layout_marginStart="4dp"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp">
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:backgroundTint="#cc99ff"
+                        android:src="@drawable/ic_school_black_24dp"
+                        android:background="@drawable/round_bg"
+                        android:contentDescription="@string/img"/>
+                    <TextView
+                        android:id="@+id/text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_2"
+                        android:layout_marginStart="4dp"
+                        android:text="Current Best"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/current_best"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_2"
+                        android:layout_below="@id/text_2"
+                        android:text="73/75(97%)"
+                        android:layout_marginStart="4dp"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:backgroundTint="#ffcc00"
+                        android:src="@drawable/ic_star_black_24dp"
+                        android:background="@drawable/round_bg"
+                        android:contentDescription="@string/img"/>
+                    <TextView
+                        android:id="@+id/text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_3"
+                        android:layout_marginStart="4dp"
+                        android:text="Level"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/level_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_3"
+                        android:layout_below="@id/text_3"
+                        android:text="4 (Intermediate)"
+                        android:layout_marginStart="4dp"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/img_4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_bg"
+                        android:backgroundTint="#ff99ff"
+                        android:contentDescription="@string/img"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_create_black_24dp"
+                        android:tint="#fff" />
+
+                    <TextView
+                        android:id="@+id/text_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/img_4"
+                        android:text="Quizzes Completed"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/quizzes_completed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_4"
+                        android:layout_below="@id/text_4"
+                        android:text="12"
+                        android:layout_marginStart="4dp"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/img_5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_bg"
+                        android:backgroundTint="#4db8ff"
+                        android:contentDescription="@string/img"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_label_black_24dp"
+                        android:tint="#fff" />
+
+                    <TextView
+                        android:id="@+id/text_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/img_5"
+                        android:text="Best weapon"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/best_weapon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_5"
+                        android:layout_below="@id/text_5"
+                        android:text="Math"
+                        android:layout_marginStart="4dp"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recent_activity"
+            android:layout_margin="8dp"
+            android:textStyle="bold"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/quiz_item"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

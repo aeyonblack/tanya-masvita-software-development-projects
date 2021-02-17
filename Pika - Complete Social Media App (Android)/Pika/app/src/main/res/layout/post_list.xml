@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:id="@+id/post_details2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_margin="6dp">
+
+        <ImageView
+            android:id="@+id/post_profilePhoto2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/round_background"
+            android:contentDescription="@string/profile_photo"/>
+
+        <TextView
+            android:id="@+id/post_author2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username_placeHolder"
+            style="@style/headerStyle"
+            android:layout_marginTop="1dp"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/post_profilePhoto2"
+            android:textColor=" #334d4d"/>
+
+        <TextView
+            android:id="@+id/post_timeStamp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_author2"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/post_profilePhoto2"
+            android:text="@string/time_stamp"/>
+
+        <TextView
+            android:id="@+id/post_comments_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_comments"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:layout_alignParentEnd="true"
+            android:textColor=" #334d4d"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/post_thePost2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/post_comes_here"
+        android:textSize="18sp"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="normal"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/image_post_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_post"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0eb"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+
+        <TextView
+            android:id="@+id/reactions_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_margin="6dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/_0_reactions"/>
+
+
+        <TextView
+            android:id="@+id/dislikes_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_margin="6dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/_0_comments"
+            android:layout_alignParentEnd="true"
+            tools:ignore="RelativeOverlap" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0eb" />
+
+    <LinearLayout
+        android:id="@+id/reactions_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="4dp"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/like_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            android:text="@string/like"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+        <Button
+            android:id="@+id/comment_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="18dp"
+            android:padding="2dp"
+            android:text="@string/comment"
+            android:textAllCaps="false"
+            android:textColor="@color/colorButtonText"
+            android:textSize="12sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+        <Button
+            android:id="@+id/dislike_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="18dp"
+            android:padding="2dp"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/colorButtonText"
+            android:text="@string/dislike"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/colorDevPurple"/>
+
+
+</LinearLayout>

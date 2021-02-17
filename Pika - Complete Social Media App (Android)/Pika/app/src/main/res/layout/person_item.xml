@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/profile"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grad_circle"/>
+
+        <ImageView
+            android:id="@+id/near_user_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_background"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/profile_photo"
+            android:backgroundTint="@color/colorWhite"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/near_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_placeHolder"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/no_network_layout"
+        layout="@layout/no_network_layout"
+        android:visibility="gone"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_ep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/edit_profile_photo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:textSize="13sp"
+                    android:drawableStart="@drawable/ic_edit_black_24dp"
+                    android:text="@string/edit_profile_photo"
+                    android:textColor="@color/colorBlack"
+                    android:drawablePadding="4dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edit_profile_photo_tv"
+                    android:background="@color/colorDevPurple"/>
+
+                <ImageView
+                    android:id="@+id/edit_profile_image"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp"
+                    android:transitionName="@string/profile_photo"
+                    android:backgroundTint="@color/colorGray"
+                    android:layout_below="@id/edit_profile_photo_tv"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_background"
+                    android:contentDescription="@string/profile_photo"/>
+
+                <ProgressBar
+                    android:id="@+id/edit_profile_uploading_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/edit_profile_photo_tv"
+                    android:layout_marginTop="32dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/edit_profile_pic_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_margin="6dp"
+                    android:layout_below="@id/edit_profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_background_white"
+                    android:text="@string/edit"
+
+                    android:textAllCaps="false"
+                    android:drawableStart="@drawable/ic_camera_alt_black_24dp"
+                    android:padding="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/edit_profile_pic_button"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorDevPurple"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/editBio_tv"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:drawableStart="@drawable/ic_edit_black_24dp"
+                    android:text="@string/edit_bio"
+                    android:textColor="@color/colorBlack"
+                    android:drawablePadding="4dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/editBio_tv"
+                    android:background="@color/colorDevPurple"/>
+
+                <TextView
+                    android:id="@+id/edit_profile_bio_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="6dp"
+                    android:textAlignment="center"
+                    android:layout_below="@id/editBio_tv"
+                    android:text="@string/place_holder_bio"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bio_input_layout"
+                    android:visibility="invisible"
+                    android:layout_margin="8dp"
+                    layout="@layout/text_input_layout"
+                    android:layout_below="@id/editBio_tv"/>
+
+
+                <Button
+                    android:id="@+id/edit_bio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_margin="6dp"
+                    android:layout_below="@id/edit_profile_bio_tv"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_background_white"
+                    android:text="@string/edit"
+                    android:textAllCaps="false"
+                    android:drawableStart="@drawable/ic_edit_black_24dp"
+                    android:padding="8dp" />
+
+                <Button
+                    android:id="@+id/save_bio_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_margin="6dp"
+                    android:layout_below="@id/bio_input_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_background_white"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:drawableStart="@drawable/ic_check_black_24dp"
+                    android:padding="8dp"
+                    android:visibility="invisible"/>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorDevPurple"/>
+
+                <TextView
+                    android:id="@+id/editInfoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/personal_info"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/ic_bubble_chart_black_24dp"/>
+
+                <View
+                    android:id="@+id/edit_Div"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorDevPurple"/>
+
+                <!--Fingerprint-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/fingerprint_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_fingerprint_black_24dp"
+                        android:backgroundTint="@color/colorFingerprint"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/fingerprint_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Fingerprint"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/fingerprint_img2"/>
+
+                    <TextView
+                        android:id="@+id/fingerprint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/fingerprint_img2"
+                        android:layout_below="@id/fingerprint_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Status-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/status_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorStatus"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_visibility_black_24dp"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/status_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Status"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/status_img2"/>
+
+                    <TextView
+                        android:id="@+id/status2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/status_img2"
+                        android:layout_below="@id/status_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Age-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/age_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorAge"
+                        android:src="@drawable/ic_all_inclusive_black_24dp"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/age_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Age"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/age_img2"/>
+
+                    <TextView
+                        android:id="@+id/age2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/age_img2"
+                        android:layout_below="@id/age_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Location-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/location_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorLocation"
+                        android:src="@drawable/ic_person_pin_circle_black_24dp"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/location_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Location"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/location_img2"/>
+
+                    <TextView
+                        android:id="@+id/location2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/location_img2"
+                        android:layout_below="@id/location_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Relationship status-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/relation_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorRelationship"
+                        android:src="@drawable/ic_favorite_black_24dp"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/relation_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Relationship Status"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/relation_img2"/>
+
+                    <TextView
+                        android:id="@+id/relation2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/relation_img2"
+                        android:layout_below="@id/relation_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Mood-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/mood_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorMood"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhite"
+                        android:src="@drawable/ic_mood_black_24dp"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/mood_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Mood"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/mood_img2"/>
+
+                    <TextView
+                        android:id="@+id/mood2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/mood_img2"
+                        android:layout_below="@id/mood_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Following-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/following_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorFollowing"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_group_black_24dp"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/following_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Following"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/following_img2"/>
+
+                    <TextView
+                        android:id="@+id/following2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/following_img2"
+                        android:layout_below="@id/following_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <!--Followers-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/followers_img2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/colorFollowers"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_bubble_chart"
+                        android:tint="@color/colorWhite"
+                        android:contentDescription="@string/profile_info_icon"/>
+
+                    <TextView
+                        android:id="@+id/followers_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Followers"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/followers_img2"/>
+
+                    <TextView
+                        android:id="@+id/followers2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/followers_img2"
+                        android:layout_below="@id/followers_title2"
+                        android:layout_marginStart="4dp"
+                        android:textSize="12sp"
+                        android:text="@string/info"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/edit_Div2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorDevPurple"/>
+
+                <Button
+                    android:id="@+id/edit_info_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_margin="6dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background_white"
+                    android:text="@string/edit"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="false"
+                    android:drawableStart="@drawable/ic_bubble_chart"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

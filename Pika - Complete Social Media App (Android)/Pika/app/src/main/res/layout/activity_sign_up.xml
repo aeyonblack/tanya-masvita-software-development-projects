@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_signUp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SignUpActivity"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/su_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="32dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pikka"
+            style="@style/playbookLogo"
+            android:contentDescription="@string/pika_logo"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/sign_up"
+            style="@style/headerStyle"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:text="@string/et_email_hint"
+            style="@style/hintStyle"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"/>
+
+        <EditText
+            style="@style/inputStyle"
+            android:background="@drawable/white_edit_text"
+            android:id="@+id/et2_email"
+            android:inputType="textEmailAddress"
+            tools:ignore="Autofill,LabelFor"
+            android:elevation="2dp"/>
+
+        <TextView
+            android:text="@string/password"
+            android:textStyle="bold"
+            style="@style/hintStyle"
+            android:textColor="@color/colorWhite"/>
+
+        <EditText
+            style="@style/inputStyle"
+            android:background="@drawable/white_edit_text"
+            android:id="@+id/et2_password"
+            android:inputType="textPassword"
+            tools:ignore="Autofill,LabelFor"
+            android:elevation="2dp"/>
+
+        <Button
+            android:id="@+id/su_signUpButton"
+            style="@style/loginButtonStyle"
+            android:background="@drawable/button_background_white"
+            android:text="@string/sign_up"
+            android:textColor="#d580ff"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/verify_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/verify_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Verify Email"
+            android:background="@drawable/rounded_button_background"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="80dp"
+            android:layout_centerInParent="true"
+            android:paddingLeft="80dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="#f9f535"
+            android:textColor="@color/colorBlack"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/verify_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:backgroundTint="#f9f535"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_button_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/verify_email_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Email"
+                    android:textColor="@color/colorBlack"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_verify_email"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:indeterminateTint="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/sending_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/verify_email"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:text="@string/sending_verification"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/signUp_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <!--Enter username Layout-->
+    <RelativeLayout
+        android:id="@+id/username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/field_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Enter Username"
+            android:inputType="textCapSentences|textPersonName"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/continue_bt_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_username"
+            android:layout_centerHorizontal="true"
+            android:text="Continue"
+            android:background="@drawable/rounded_button_background"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:clickable="true"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorBlack"
+            android:focusable="true"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/update_name_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_username"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/update_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:textColor="@color/colorBlack"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_update_name"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progress_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/field_username"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorBlack"/>
+
+
+    </RelativeLayout>
+
+    <!--Password and email address-->
+    <RelativeLayout
+        android:id="@+id/email_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/field_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/field_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/field_email"/>
+
+
+        <TextView
+            android:id="@+id/continue_bt_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_password"
+            android:layout_centerHorizontal="true"
+            android:text="Continue"
+            android:background="@drawable/rounded_button_background"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:textColor="@color/colorBlack"
+            android:focusable="true"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/sign_up_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_password"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SignUp"
+                    android:textColor="@color/colorBlack"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_sign_up"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/field_password"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorBlack"/>
+
+
+    </RelativeLayout>
+
+    <!--Mobile Number-->
+    <RelativeLayout
+        android:id="@+id/phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/field_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Contact number"
+            android:inputType="phone"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+
+        <TextView
+            android:id="@+id/continue_bt_v3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_phone_number"
+            android:layout_centerHorizontal="true"
+            android:text="Continue"
+            android:background="@drawable/rounded_button_background"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:layout_margin="8dp"
+            android:textColor="@color/colorBlack"/>
+
+        <ProgressBar
+            android:id="@+id/progress_v3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/field_phone_number"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorBlack"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/terms_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_of_use"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:layout_margin="8dp"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

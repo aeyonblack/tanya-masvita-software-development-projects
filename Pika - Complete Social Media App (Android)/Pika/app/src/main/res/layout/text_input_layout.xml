@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:backgroundTint="@color/colorGray"
+    android:background="@drawable/edit_text_background_filled">
+
+    <EditText
+        android:id="@+id/user_bio_input_filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a short description of yourself"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textSize="13sp"
+        android:padding="8dp"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

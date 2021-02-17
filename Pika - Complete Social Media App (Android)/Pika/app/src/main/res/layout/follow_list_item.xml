@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/follow_profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_background"
+        android:contentDescription="@string/profile_photo" />
+
+    <TextView
+        android:id="@+id/follow_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/username_placeHolder"
+        android:layout_toEndOf="@id/follow_profile_pic"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/following_icon_indicator"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/follow_user_name"
+        android:src="@drawable/ic_person_add_black_24dp"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/follow_user_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is currently in Pretoria"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/follow_user_name"
+        android:layout_toEndOf="@id/follow_profile_pic"/>
+
+    <Button
+        android:id="@+id/follow_button"
+        android:layout_width="80dp"
+        android:elevation="0dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Follow"
+        android:textSize="12sp"
+        android:layout_toStartOf="@id/follow_user_name"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:backgroundTint="#66b3ff"
+        android:background="@drawable/rec_background"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/unfollow_button"
+        android:layout_width="80dp"
+        android:elevation="0dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Unfollow"
+        android:textSize="12sp"
+        android:layout_toStartOf="@id/follow_user_name"
+        android:backgroundTint="@color/colorMood"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:background="@drawable/follow_button"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGray"
+        android:layout_below="@id/follow_profile_pic"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

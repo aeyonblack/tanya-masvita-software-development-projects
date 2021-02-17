@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CameraFragment"
+    android:background="@color/colorWhite">
+
+
+    <com.acronym.pika.camera.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/selfie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_autorenew_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:tint="@color/colorWhite"/>
+
+    <ImageView
+        android:id="@+id/flash_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_flash_on_black_24dp"
+        android:layout_margin="8dp"
+        android:tint="@color/colorWhite"
+        android:layout_toStartOf="@id/selfie"/>
+
+
+    <LinearLayout
+        android:id="@+id/snap_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grad_img_6"
+            android:src="@drawable/ic_menu_gallery"
+            android:padding="8dp"
+            android:alpha="0.7"
+            android:visibility="gone"
+            android:tint="@color/colorWhite"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/story_progress_bar"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.4"
+                android:backgroundTint="@color/colorPink"
+                android:background="@drawable/round_background"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grad_img_6"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:padding="8dp"
+            android:tint="@color/colorWhite"
+            android:alpha="0.7"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

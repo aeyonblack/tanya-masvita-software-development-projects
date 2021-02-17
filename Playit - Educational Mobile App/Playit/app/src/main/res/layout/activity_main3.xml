@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main3Activity"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/weapon_select_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_your_weapon"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#fff"
+                android:background="@drawable/grad_3"
+                android:paddingTop="16dp"
+                android:textSize="16sp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/brain"
+                android:drawablePadding="16dp"/>
+
+            <View
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#333333"
+                android:visibility="gone"
+                android:layout_below="@id/weapon_select_tv"/>
+
+            <LinearLayout
+                android:id="@+id/column_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_below="@id/div">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/puzzles_quizzes"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGreen"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/tags"
+                    android:drawableTint="@color/colorAccent"
+                    android:drawablePadding="8dp"
+                    tools:ignore="UnusedAttribute" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/math_quiz"
+                        android:background="@drawable/grad_7"
+                        android:text="@string/math"
+                        style="@style/quizStyle" />
+
+                    <TextView
+                        android:id="@+id/logic_quiz"
+                        style="@style/quizStyle"
+                        android:background="@drawable/grad_1"
+                        android:text="@string/logic"/>
+
+                    <TextView
+                        android:id="@+id/story_quiz"
+                        style="@style/lockedQuizStyle"
+                        android:text="@string/story"/>
+                    <TextView
+                        android:id="@+id/riddle_quiz"
+                        style="@style/lockedQuizStyle"
+                        android:text="@string/riddle"/>
+                    <TextView
+                        android:id="@+id/science_quiz"
+                        style="@style/lockedQuizStyle"
+                        android:text="@string/science" />
+                    <TextView
+                        android:id="@+id/mystery_quiz"
+                        style="@style/lockedQuizStyle"
+                        android:text="@string/mysteries"/>
+                    <TextView
+                        android:id="@+id/probability_quiz"
+                        android:text="@string/probability"
+                        style="@style/lockedQuizStyle" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/illusions_more_puzzles"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorGreen"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/tags"
+                    android:drawableTint="@color/colorAccent"
+                    android:drawablePadding="8dp"
+                    tools:ignore="UnusedAttribute" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/impossible_quiz"
+                        android:text="@string/impossible"
+                        tools:ignore="UnusedAttribute"
+                        style="@style/quiz2Style" />
+                    <TextView
+                        android:id="@+id/what_am_i_quiz"
+                        style="@style/quiz2Style"
+                        android:text="@string/what_am_i"
+                        tools:ignore="UnusedAttribute" />
+                    <TextView
+                        android:id="@+id/anamorphic_quiz"
+                        style="@style/quiz2Style"
+                        android:text="@string/anamorphic"
+                        android:layout_marginBottom="64dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_below="@id/app_bar"
+            android:layout_marginTop="8dp"
+            app:contentPadding="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/progress_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="Time"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/start_quiz_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/start_quiz_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/white_button_background"
+                android:text="@string/start_quiz"
+                android:backgroundTint="#cc99ff"
+                android:layout_margin="8dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_points_26xp"
+                android:layout_margin="8dp"
+                android:textStyle="bold"
+                android:textColor="#ff0000"
+                android:visibility="gone"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/numerical_quiz_layout"
+            layout="@layout/numerical_quiz"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="@string/non_disclaimer"/>
+
+    </RelativeLayout>
+
+    <!--Main root view-->
+
+
+
+
+
+</ScrollView>

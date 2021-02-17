@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ve_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <TextView
+            android:id="@+id/tv_verify_email"
+            style="@style/headerStyle"
+            android:text="@string/verify_email"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_email_not_verified"
+            style="@style/hintStyle"
+            android:text="@string/email_address_not_verified"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/bt_verify_email"
+            style="@style/buttonStyle2"
+            android:textColor="#d580ff"
+            android:text="@string/verify"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

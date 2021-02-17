@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Main Colors-->
+    <color name="colorPrimary">#333131</color>
+    <color name="colorSecondary">#bf80ff</color>
+    <color name="colorPrimaryDark">#b366ff</color>
+    <color name="colorAccent">#cc99ff</color>
+
+    <!--Other Colors-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#f2f2f2</color>
+    <color name="colorDevPurple">#e0e0eb</color>
+    <color name="colorOrange">#ff751a</color>
+    <color name="colorRed">#ff8080</color>
+    <color name="colorHotRed">#cc0000</color>
+    <color name="colorButtonText">#334d4d</color>
+    <color name="colorGrayDark">#808080</color>
+    <color name="colorLightGray">#A6A6A6</color>
+    <color name="colorYellow">#e6e600</color>
+    <color name="colorPink">#ff80ff</color>
+    <color name="colorLightAccent">#d7b3ff</color>
+    <color name="colorPinkDark">#ff0080</color>
+    <color name="colorDarkBlue"> #0000e6</color>
+    <color name="colorDarkMer"> #862d59</color>
+    <color name="colorDarkYellow">#ffcc00</color>
+    <color name="colorPurplish">#5c5c8a</color>
+
+    <!--Background Tints-->
+    <color name="colorFingerprint">#00cc99</color>
+    <color name="colorStatus">#66ccff</color>
+    <color name="colorAge">#ff99cc</color>
+    <color name="colorLocation">#cc99ff</color>
+    <color name="colorRelationship">#ff8080</color>
+    <color name="colorMood">#ffcc00</color>
+    <color name="colorFollowers">#66ccff</color>
+    <color name="colorFollowing">#40ff00</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>

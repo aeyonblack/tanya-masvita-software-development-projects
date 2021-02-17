@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Playit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="score">Score</string>
+    <string name="settings">Settings</string>
+    <string name="clear">Clear All</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="img">img</string>
+    <string name="total_score">Total score</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="choose_your_weapon">Choose your weapon</string>
+    <string name="probability">Probability</string>
+    <string name="mysteries">Mysteries</string>
+    <string name="science">Science</string>
+    <string name="riddle">Riddle</string>
+    <string name="story">Story</string>
+    <string name="math">Math</string>
+    <string name="logic">Logic</string>
+    <string name="puzzles_quizzes">Puzzles/Quizzes</string>
+    <string name="illusions_more_puzzles">Illusions/More Puzzles</string>
+    <string name="impossible">Impossible</string>
+    <string name="what_am_i">What am I?</string>
+    <string name="anamorphic">Anamorphic</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="total_points_26xp">Total Points : 26xp</string>
+    <string name="non_disclaimer">Note that this challenge is timed. This helps improve your critical thinking skills and to build competence and confidence. After taking more of these challenges you\'ll be able to think on your feet in any situation.</string>
+    <string name="play_again">Play again</string>
+    <string name="quizzes_finished">You have exhausted all your quizzes. But you can still purchase more:-)</string>
+    <string name="next">Next</string>
+    <string name="quiz_place_holder">Some question will Show up right in this view. To make this look more realistic the question has to be longer?</string>
+    <string name="badge_place_holder">Badge Name \nThis is what you need to do to unlock this badge</string>
+    <string name="statistics_and_achievements">Statistics and Achievements</string>
+    <string name="stats">Statistics</string>
+</resources>

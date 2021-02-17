@@ -1,0 +1,234 @@
+<resources>
+    <string name="app_name">Pika</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="playbook_logo">Playbook Logo</string>
+    <string name="to">to</string>
+    <string name="username_placeHolder">Username</string>
+    <string name="login_now_bt">Login Now</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="et_email_hint">Email</string>
+    <string name="login_instead">Login Instead</string>
+    <string name="password">Password</string>
+    <string name="welcome_again">Welcome to Pika!</string>
+    <string name="continue_hint">Continue to begin setting up your account</string>
+    <string name="next">Continue</string>
+    <string name="username_hint">What\'s your name?</string>
+    <string name="next_hint">Next</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="play_pic_title">Snap a pic</string>
+    <string name="snap">Snap</string>
+    <string name="finally_tv">Finally!</string>
+    <string name="tv_finallySub">Tell us more about yourself</string>
+    <string name="dob">date of birth</string>
+    <string name="finish">Finish</string>
+    <string name="retry">Retry</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="email_address_not_verified">Email address not verified</string>
+    <string name="verify">Verify</string>
+    <string name="activity_feed">Activity Feed</string>
+    <string name="news_feed">News Feed</string>
+    <string name="profile">Profile</string>
+    <string name="meeting">Meeting</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="search">Search…</string>
+    <string name="camera">camera</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_post">New Post</string>
+    <string name="icon">Icon</string>
+    <string name="options_item">Options Item</string>
+    <string name="no_feed">No Feed</string>
+    <string name="all_news_here">All News Here</string>
+    <string name="new_buzz">New Buzz</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit">Edit</string>
+    <string name="u">U</string>
+    <string name="place_holder_bio">Your Main Biography shows up right here together with your profile photo and additional info below.</string>
+    <string name="pika_welcome_text">Get the most out of social media. #sharebeautiful every moment</string>
+    <string name="content_description">Playbook Alerts</string>
+    <string name="write_new">Write New…</string>
+    <string name="share_your_thoughts">Share Beautiful…</string>
+    <string name="save_draft">Save draft</string>
+    <string name="age_in_years">Age in years</string>
+    <string name="short_bio">Short Bio</string>
+    <string name="display_name">Display name</string>
+    <string name="save">Save</string>
+    <string name="no_connection">No connection</string>
+    <string name="messaging_icon">Messaging Icon</string>
+    <string name="progress_uploading">Uploading…</string>
+    <string name="progress_downloading">Downloading</string>
+    <string name="download_success">Download Finished</string>
+    <string name="download_failure">Download Failed</string>
+    <string name="playbook_copyright">Copyright &#169; 2019, Acronym .Inc </string>
+    <string name="cover_image">Cover Image</string>
+    <string name="post_hint">Post…</string>
+    <string name="user_add_bio">You have no biography. Add one to decorate your profile!</string>
+    <string name="username_placeholder">Username</string>
+    <string name="time_stamp">2hrs ago</string>
+    <string name="image_button">Image Button</string>
+    <string name="write_post">Share your thoughts…</string>
+
+
+    <!--Option names array-->
+    <string-array name="options_names">
+        <item>Settings</item>
+        <item>Notifications</item>
+        <item>View My Profile</item>
+        <item>People</item>
+        <item>Messaging</item>
+        <item>Trending</item>
+        <item>Pickups</item>
+        <item>Playbook News</item>
+        <item>My Day</item>
+        <item>Popular HashTags</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="likesCount">Liked this</string>
+    <string name="hot_hot">Hot</string>
+    <string name="post_pic_hint">Write something about the pic…</string>
+    <string name="user_post_image">User Post Image</string>
+    <string name="drop_a_comment">Drop a comment…</string>
+    <string name="all_rights_reserved">All rights reserved</string>
+    <string name="pika_logo">Pika logo</string>
+    <string name="choose_a_profile_pic">Choose a profile pic</string>
+    <string name="profile_info_icon">Profile Info Icon</string>
+    <string name="title">Title</string>
+    <string name="info">Info</string>
+    <string name="edit_info">Edit Info</string>
+    <string name="edit_profile_photo">Edit Profile Photo</string>
+    <string name="background_image">Background Image</string>
+    <string name="single_relation_stat">Just single</string>
+    <string name="single_ready_mingle">Single (and ready to mingle)</string>
+    <string name="in_a_relationship">In a relationship</string>
+    <string name="married">Married</string>
+    <string name="broke_up">Broke up</string>
+    <string name="not_sure">Not sure</string>
+    <string name="rather_not_say">Rather not say</string>
+    <string name="share_your_mood">Share your mood</string>
+    <string name="soon_i_ll_be_updating_this_for_you">Soon I\'ll be updating this for you</string>
+    <string name="e_g_21">e.g 21</string>
+    <string name="whats_your_relationship_status">Whats your relationship status?</string>
+    <string name="feeling_awesome">Feeling Awesome</string>
+    <string name="edit_bio">Edit bio</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="loading_ph_text">Loading…</string>
+    <string name="change">Update</string>
+    <string name="item_name">Item name</string>
+    <string name="image_post">Image Post</string>
+    <string name="likes_place_holder">0 people liked this</string>
+    <string name="comments_place_holder">0 Commented</string>
+    <string name="post_comes_here">Post comes here</string>
+    <string name="post">Post</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="_0_liked_this">0 liked this</string>
+    <string name="_0_comments">0 Comments</string>
+    <string name="updating">Updating…</string>
+    <string name="one_step_away">One step away!</string>
+    <string name="connected">Connected</string>
+    <string name="dislike">Dislike</string>
+    <string name="_0_reactions">0 reactions</string>
+    <string name="just_a_moment_please">Just a moment please…</string>
+    <string name="img_place_holder">img_place_holder</string>
+    <string name="sad_cloud">Sad cloud</string>
+    <string name="you_are_not_connected">You are not connected</string>
+    <string name="what_do_you_think">Write a comment</string>
+    <string name="place_holder_comment">Anything you comment comes right here</string>
+    <string name="place_holder_timestamp">09 Mar 2019</string>
+    <string name="zero">0</string>
+
+    <string-array name="menuItemNames">
+        <item>Settings</item>
+        <item>People</item>
+        <item>My Day</item>
+        <item>Pick ups</item>
+        <item>Trending</item>
+        <item>Followers</item>
+        <item>Following</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="menuItemIcons">
+        <item>@drawable/ic_settings_black_24dp</item>
+        <item>@drawable/ic_supervisor_account_black_24dp</item>
+        <item>@drawable/ic_check_black_24dp</item>
+        <item>@drawable/ic_attach_money_black_24dp</item>
+        <item>@drawable/ic_whatshot_black_24dp</item>
+        <item>@drawable/ic_bubble_chart_black_24dp</item>
+        <item>@drawable/ic_group_black_24dp</item>
+        <item>@drawable/ic_exit_to_app_black_24dp</item>
+    </string-array>
+
+    <string-array name="profileBackgroundTints">
+        <item>@color/colorFingerprint</item>
+        <item>@color/colorStatus</item>
+        <item>@color/colorAge</item>
+        <item>@color/colorLocation</item>
+        <item>@color/colorRelationship</item>
+        <item>@color/colorMood</item>
+        <item>@color/colorFollowers</item>
+        <item>@color/colorFollowing</item>
+    </string-array>
+
+    <string-array name="menuColors">
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>#4dff88</item>
+        <item>#00e68a</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorRelationship</item>
+    </string-array>
+
+    <string name="now_time_range">now</string>
+    <string name="duration_minutes_shortest">%1$d m ago</string>
+    <string name="duration_hours_shortest">%1$d h ago</string>
+    <string name="duration_days_shortest">%1$d d ago</string>
+    <string name="duration_week_shortest">%1$d w ago</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="preview">Preview</string>
+    <string name="pika_moments">My story</string>
+    <string name="no_updates_yet">No updates yet</string>
+    <string name="search_users">Find people…</string>
+    <string name="me_">Me</string>
+    <string name="write_a_post">Write a post</string>
+    <string name="circle_progress">circle_progress</string>
+    <string name="request_permissions">Request Permissions</string>
+
+    <string name="title_activity_pika_camera">PikaCameraActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+
+
+    <!-- Shrine backdrop menu labels -->
+    <string name="shr_featured_label">Featured</string>
+    <string name="shr_apartment_label">Apartment</string>
+    <string name="shr_accessories_label">Accessories</string>
+    <string name="shr_shoes_label">Shoes</string>
+    <string name="shr_tops_label">Tops</string>
+    <string name="shr_bottoms_label">Bottoms</string>
+    <string name="shr_dresses_label">Dresses</string>
+    <string name="shr_account_label">My Account</string>
+    <string name="find_people_around_me">Near me…</string>
+    <string name="image">Image</string>
+    <string name="ellipses">…</string>
+    <string name="terms_of_use">Your username will be visible to everyone including your contacts on Pika. By continuing you agree to our Terms of Service and affirm to being aware of what your personal info will be used for.</string>
+    <string name="verify_email_terms">Verify your email address to continue. Unverified accounts will be shut down in 48 hours. This is done for security reasons and safety of user data.</string>
+    <string name="sending_verification">Sending Verification…</string>
+
+
+</resources>

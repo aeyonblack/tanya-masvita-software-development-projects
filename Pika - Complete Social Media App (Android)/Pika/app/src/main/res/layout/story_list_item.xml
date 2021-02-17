@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/story_profile_photo"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_ripple"
+            android:contentDescription="@string/profile_photo" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:padding="4dp"
+            android:tint="@color/colorWhite"
+            android:background="@drawable/round_stroke_bg"
+            android:src="@drawable/ic_add_black_24dp"
+            android:foregroundGravity="center"
+            app:layout_anchor="@id/story_profile_photo"
+            app:layout_anchorGravity="right|bottom"
+            android:contentDescription="@string/image_button" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pika_moments"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        android:textSize="12sp"
+        android:textAlignment="center"/>
+
+</LinearLayout>

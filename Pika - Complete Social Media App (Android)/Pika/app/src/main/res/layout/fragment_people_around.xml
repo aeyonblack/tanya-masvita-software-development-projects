@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/find_people_around_me"
+            android:background="@drawable/edit_text_background_filled"
+            android:textColor="@color/colorLightGray"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:drawableTint="@color/colorLightGray"
+            android:padding="12dp"
+            android:backgroundTint="@color/colorGray"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_search_black_24dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/people_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/people_around_list_item"
+            android:padding="1dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="250dp"
+    android:src="@drawable/ic_spinner"
+    android:padding="100dp"
+    android:background="@color/colorWhite"
+    android:id="@+id/post_img_placeholder"
+    android:contentDescription="@string/img_place_holder">
+
+</ImageView>

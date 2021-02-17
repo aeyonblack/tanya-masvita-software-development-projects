@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.acronym.pika">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CreateAccountActivity"
+            android:theme="@style/SignUpTheme"/>
+        <activity
+            android:name=".Main2Activity"
+            android:alwaysRetainTaskState="true"
+            android:noHistory="false"
+            android:persistableMode="persistAcrossReboots"
+            android:theme="@style/DarkTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SellActivity"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".PikaCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_pika_camera"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".PikaCamera" />
+        <activity
+            android:name=".NavDrawerActivity"
+            android:label="@string/title_activity_nav_drawer"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".NewPost2Activity"
+            android:theme="@style/DarkTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CommentsActivity"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".EditProfileInfo"
+            android:parentActivityName=".EditProfileActivity"
+            android:theme="@style/DarkTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".NewPostActivity"
+            android:theme="@style/DarkTheme" />
+        <activity android:name=".ProfileSetupActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/SignUpTheme" />
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/SignUpTheme" />
+        <activity android:name=".WelcomeActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/DarkTheme"></activity>
+        <activity android:name=".BaseActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "113613274695",
+    "firebase_url": "https://pika-4121a.firebaseio.com",
+    "project_id": "pika-4121a",
+    "storage_bucket": "pika-4121a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113613274695:android:bfe3b8f5f085eeee",
+        "android_client_info": {
+          "package_name": "com.acronym.pika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113613274695-dfbs1jak2tmovt3tsfrfn03eokddtgm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acronym.pika",
+            "certificate_hash": "df79a51ab8b0a39c1ffb9406bee236a89ffd4cd2"
+          }
+        },
+        {
+          "client_id": "113613274695-odo8td8qb42rbu1pfjoor049m674qhg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdc1LwasoIJXPCcN4ydRf9HS69i4dBAOQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113613274695-odo8td8qb42rbu1pfjoor049m674qhg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

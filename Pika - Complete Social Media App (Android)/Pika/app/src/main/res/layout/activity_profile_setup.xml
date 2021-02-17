@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    tools:context=".ProfileSetupActivity"
+    android:background="#d580ff">
+
+    <ImageView
+        android:id="@+id/iv3_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/pika_logo"
+        android:src="@drawable/pikka"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/layout2_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/headerStyle"
+            android:textStyle="bold"
+            android:text="@string/welcome_again"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/hintStyle"
+            android:layout_gravity="center"
+            android:text="@string/continue_hint" />
+
+
+        <Button
+            android:id="@+id/continue_button1"
+            style="@style/loginButtonStyle"
+            android:background="@drawable/button_background_white"
+            android:text="@string/next"
+            android:textColor="#d580ff"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/headerStyle"
+            android:text="@string/username_hint"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/et_userDisplayName1"
+            style="@style/inputStyle"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/continue_button2"
+            android:text="@string/next_hint"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/button_background_white"
+            style="@style/buttonStyle2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/updating_profile_layout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/hintStyle"
+            android:text="@string/updating"
+            android:layout_gravity="center_horizontal" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateTint="@color/colorWhite"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2_userphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            style="@style/headerStyle"
+            android:text="@string/choose_a_profile_pic"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_userDisplayPhoto1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/round_background"
+                android:contentDescription="@string/profile_photo"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/colorWhite"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp" />
+
+            <ProgressBar
+                android:id="@+id/photoUpdate_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/colorWhite"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/snatch_button"
+            style="@style/buttonStyle2"
+            android:text="@string/snap"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background_white"
+            android:textColor="@color/colorBlack"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/continue_button3"
+            style="@style/buttonStyle2"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/button_background_white"
+            android:text="@string/next"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/final_layout"
+        android:visibility="gone">
+        <TextView
+            style="@style/headerStyle"
+            android:text="@string/one_step_away"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/final_button"
+            style="@style/buttonStyle2"
+            android:text="@string/finish"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

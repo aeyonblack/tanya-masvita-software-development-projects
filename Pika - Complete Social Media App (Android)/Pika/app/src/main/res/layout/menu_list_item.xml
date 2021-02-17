@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:ignore="UseCompoundDrawables"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="6dp">
+
+
+    <ImageView
+        android:id="@+id/menu_item_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:tint="@color/colorWhite"
+        android:padding="8dp"
+        android:backgroundTint="@color/colorAge"
+        android:contentDescription="@string/profile_photo"
+        android:background="@drawable/round_background"/>
+
+    <TextView
+        android:id="@+id/menu_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_name"
+        android:textSize="14sp"
+        android:layout_margin="8dp"
+        android:textColor="@color/colorBlack"/>
+
+</LinearLayout>

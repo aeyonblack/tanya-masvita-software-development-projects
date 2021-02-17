@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TradeFragment"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="12dp">
+
+            <Button
+                android:layout_width="110dp"
+                android:id="@+id/sell_item_button"
+                android:layout_height="40dp"
+                android:text="Sell"
+                android:backgroundTint="@color/colorGray"
+                android:padding="6dp"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:background="@drawable/edit_text_background_filled"
+                android:drawableStart="@drawable/ic_monetization_on_black_24dp"/>
+
+            <Button
+                android:id="@+id/post_item_button"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_background_filled"
+                android:backgroundTint="#e6fff2"
+                android:text="Post"
+                android:layout_margin="4dp"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_sign_post"
+                android:padding="6dp"/>
+
+        </RelativeLayout>
+
+        <!--No items for sale layout-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="no items for sale yet"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <!--Recent items for sale-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_margin="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recent_items_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:listitem="@layout/recent_sell_item"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHECKOUT"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_margin="8dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/items_for_sale_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            tools:listitem="@layout/current_sell_item"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
