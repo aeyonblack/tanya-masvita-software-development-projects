@@ -1,2 +1,0 @@
-Cannot commit APKS over 100mb 
-Willing to demonstrate APK files onsite

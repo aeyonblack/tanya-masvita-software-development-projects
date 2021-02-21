@@ -1,0 +1,10 @@
+HOW TO RUN 
+----------
+
+This program is a standalone java app so it requires 
+jdk/jre to be installed
+
+To make things even simpler, install a Java IDE
+Preferably Intellij IDEA Community 
+Download the project and IMPORT it into the IDE 
+Click run and that's it.

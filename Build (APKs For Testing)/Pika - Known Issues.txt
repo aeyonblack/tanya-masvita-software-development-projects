@@ -2,3 +2,21 @@
 1. Sometimes list adapters for the followers and following lists do not load any data
 2. A lot of Debug toast statements since this version was not for production
 3. Some UI elements are still in development
+4. Dropped the project due to abundant electrical engineering course work
+5. Sometimes a comment shows up on the wrong post
+
+======= WHAT PIKA CAN DO ========
+1. Signup and Login 
+2. Upload profile photo 
+3. Update profile information
+4. 4 different types of posts including, 
+	4.1 Text Only Post
+	4.2 Image Post (with\without caption)
+	4.3 Gradient Background with text
+	4.4 Color Background with text
+5. Comment on any post
+6. Like any posts
+7. See post likes
+8. Follow and be followed by users
+9. Logout
+10. Incomplete marketplace

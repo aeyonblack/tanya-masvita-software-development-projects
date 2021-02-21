@@ -1,0 +1,3 @@
+===== KNOWN ISSUES =====
+There's a limited number of quizzes
+Forgot to implement the clear data button 
